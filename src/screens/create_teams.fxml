@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreateTeams">
+   <children>
+      <VBox layoutY="6.0" prefHeight="119.0" prefWidth="500.0" styleClass="bg-primary" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="102.0" prefWidth="305.0" styleClass="bg-primary" text="Add Teams">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="teamNo" layoutX="14.0" layoutY="94.0" prefHeight="45.0" prefWidth="474.0" text="Team Details for team number 1" AnchorPane.bottomAnchor="661.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="94.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="139.0" prefHeight="45.0" prefWidth="474.0" text="  Name of Team" AnchorPane.bottomAnchor="616.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="139.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="371.0" layoutX="115.0" layoutY="139.0" startX="-100.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Label layoutX="13.0" layoutY="247.0" prefHeight="45.0" prefWidth="474.0" text="  Team Initials" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="355.0" prefHeight="45.0" prefWidth="474.0" text="  Captain Name" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="355.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="465.0" prefHeight="45.0" prefWidth="474.0" text="  Coach Name" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="465.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="teamName" layoutX="28.0" layoutY="184.0" prefHeight="55.0" prefWidth="442.0" AnchorPane.bottomAnchor="561.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="184.0" />
+      <TextField fx:id="capName" layoutX="28.0" layoutY="400.0" prefHeight="55.0" prefWidth="442.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" />
+      <TextField fx:id="teamInit" layoutX="28.0" layoutY="292.0" prefHeight="55.0" prefWidth="442.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" />
+      <TextField fx:id="coachName" layoutX="29.0" layoutY="510.0" prefHeight="55.0" prefWidth="442.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" />
+      <Button fx:id="previous" layoutX="28.0" layoutY="606.0" mnemonicParsing="false" onAction="#Previous" prefHeight="68.0" prefWidth="188.0" text="Prrevious" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="284.0" AnchorPane.topAnchor="606.0" />
+      <Button fx:id="next" layoutX="284.0" layoutY="606.0" mnemonicParsing="false" onAction="#Next" prefHeight="68.0" prefWidth="188.0" styleClass="bg-light" text="Next" />
+      <Label fx:id="validation" layoutX="26.0" layoutY="696.0" prefHeight="45.0" prefWidth="444.0" textFill="#f50303" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="696.0" />
+   </children>
+</AnchorPane>

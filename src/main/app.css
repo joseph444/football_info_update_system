@@ -1,0 +1,41 @@
+.button{
+    
+    -fx-margin: 3;
+    -fx-padding: 3;
+    -fx-overflow: hidden;
+    -fx-position: relative;
+    -fx-text-decoration: none;
+    -fx-text-transform: uppercase;
+    -fx-border-radius: 3;
+    
+    -fx-transition: 0.3s;
+
+    -fx-border: none; 
+    -fx-font-size: 15;
+    -fx-text-align: center;
+
+    
+}
+
+.bg-primary{
+    -fx-background-color: #2196f3;
+}
+
+.bg-light{
+    -fx-background-color: #6ec6ff;
+}
+
+.bg-dark{
+    -fx-background-color: #0069c0;
+
+}
+
+.bg-grey{
+    -fx-background-color: #e0e0e0;
+}
+
+.circular-btn{
+    -fx-border:none;
+    -fx-border-radius:50%;
+
+}
