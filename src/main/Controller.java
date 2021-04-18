@@ -1,13 +1,16 @@
 package main;
 
 import models.Matches;
+import models.Teams;
 import models.Tournaments;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Map;
 
 import static models.connection.*;
 import static models.tournaments.*;
+
 
 public final class Controller {
     private int tournament_id,match_id;
@@ -64,5 +67,18 @@ public final class Controller {
 
     public void setMatchDetails(Matches matchDetails) {
         this.matchDetails = matchDetails;
+    }
+
+    public Map<Integer, Teams> getAllTeams(){
+        try {
+            StringBuilder q= select(models.teams.getTableName(),new String[0]);
+            where(q,"tournament_id","=",""+this.tournament_id);
+            models.teams.executeQuery(q.toString());
+            return models.teams.getElements();
+
+        } catch (Exception throwable) {
+            throwable.printStackTrace();
+        }
+        return null;
     }
 }

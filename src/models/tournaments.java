@@ -57,6 +57,7 @@ public class tournaments {
     }
 
     public static void all(){
+        elements.clear();
         StringBuilder Query;
         String[] columns = new String[0];
         Query = select(tableName,columns);
@@ -78,6 +79,7 @@ public class tournaments {
     }
 
     public static void executeQuery(String query){
+        elements.clear();
         try {
             ResultSet rs = getResultsetFromQuery(query);
             while (rs.next()){
@@ -89,8 +91,7 @@ public class tournaments {
         } catch (SQLException e) {
             System.err.println("Exeception Occured!!");
             System.out.println(e.getMessage());
-            disconnect();
-            System.exit(1);
+            
         }
     }
 

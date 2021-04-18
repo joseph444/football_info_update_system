@@ -10,7 +10,7 @@ public class matches {
     private static final Map<Integer, Matches> elements = new HashMap<Integer,Matches>();
 
     public static void insert(int tournamentId,int team1Id,int team2Id){
-        String query = "INSERT INTO "+tableName+" (tournamnet_id,team_1_id,team_2_id,created_at) "+
+        String query = "INSERT INTO "+tableName+" (tournament_id,team_1_id,team_2_id,created_at) "+
                 "VALUES(?,?,?,?)";
 
         try {
@@ -36,20 +36,20 @@ public class matches {
         }
     }
 
-    public static void update(int tournamentId,int team1Id,int team2Id){
-        String query = "INSERT INTO "+tableName+" (tournamnet_id,team_1_id,team_2_id,created_at) "+
-                "VALUES(?,?,?,?)";
-
+    public static void update(int id,int hasStarted,int hasEnded,int team_1_goals,int team_2_goals){
+        String query = "UPDATE "+tableName+" SET hasStarted=?, hasEnded=?, team_1_goals=?,team_2_goals=?"+
+                "WHERE id = ?";
+        System.out.println(query);
         try {
             PreparedStatement stmt = getPreparedStatement(query);
 
             long millis=System.currentTimeMillis();
             java.util.Date date=new java.util.Date(millis);
 
-            stmt.setInt(1,tournamentId);
-            stmt.setInt(2,team1Id);
-            stmt.setInt(3,team2Id);
-            stmt.setString(4,date.toString());
+            stmt.setInt(1,hasStarted);
+            stmt.setInt(2,hasEnded);
+            stmt.setInt(3,team_1_goals);stmt.setInt(4,team_2_goals);
+            stmt.setInt(5,id);
 
 
             stmt.executeUpdate();
@@ -63,6 +63,7 @@ public class matches {
     }
 
     public static void all(){
+        elements.clear();
         StringBuilder Query;
         String[] columns = new String[0];
         Query = select(tableName,columns);
@@ -133,6 +134,7 @@ public class matches {
     }
 
     public static void executeQuery(String query){
+        elements.clear();
         try {
 
             String[] columns = new String[0];

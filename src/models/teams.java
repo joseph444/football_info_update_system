@@ -34,7 +34,7 @@ public class teams {
     }
 
     public static void update(int id,String name,String initials,String coach_name,int t_id,String captain_name){
-        String query = "UPDATE"+tableName+" SET name=?,initals=?,tournament_id=?,coach_name=?,captain_name=? WHERE id = ?";
+        String query = "UPDATE"+tableName+" SET name=?,initials=?,tournament_id=?,coach_name=?,captain_name=? WHERE id = ?";
 
         try {
             PreparedStatement stmt = getPreparedStatement(query);
@@ -57,6 +57,7 @@ public class teams {
     }
 
     public static void all(){
+        elements.clear();
         StringBuilder Query;
         String[] columns = new String[0];
         Query = select(tableName,columns);
@@ -88,6 +89,7 @@ public class teams {
     }
 
     public static void executeQuery(String query){
+        elements.clear();
         try {
 
             String[] columns = new String[0];
@@ -104,8 +106,8 @@ public class teams {
                             rst.getInt("no_of_teams"),rst.getInt("hasEnded")) ;
 
                 }
-                Teams  tmp =new Teams(rs.getInt("id"),rs.getString("name"),rs.getString("initals"),
-                        rs.getString("couch_name"),t,rs.getString("captain_name")) ;
+                Teams  tmp =new Teams(rs.getInt("id"),rs.getString("name"),rs.getString("initials"),
+                        rs.getString("coach_name"),t,rs.getString("captain_name")) ;
 
                 elements.put(tmp.id,tmp);
             }

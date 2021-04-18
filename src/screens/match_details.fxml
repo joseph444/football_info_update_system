@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MatchDetails">
    <children>
       <VBox layoutX="10.0" layoutY="16.0" prefHeight="95.0" prefWidth="500.0" styleClass="bg-primary" AnchorPane.bottomAnchor="705.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -27,7 +26,28 @@
             <Insets bottom="10.0" left="10.0" top="10.0" />
          </padding>
       </Button>
-      <Label layoutX="20.0" layoutY="111.0" prefHeight="95.0" prefWidth="183.0" text="Label" />
-      <Label layoutX="303.0" layoutY="119.0" prefHeight="80.0" prefWidth="183.0" text="Label" />
+      <Label fx:id="t1" alignment="CENTER" layoutX="22.0" layoutY="111.0" prefHeight="95.0" prefWidth="213.0" text="Label" AnchorPane.bottomAnchor="594.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="111.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="t2" alignment="CENTER" layoutX="250.0" layoutY="111.0" prefHeight="95.0" prefWidth="213.0" text="Label" AnchorPane.bottomAnchor="594.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="111.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="t1g" alignment="CENTER" layoutX="96.0" layoutY="177.0" prefHeight="59.0" prefWidth="64.0" text="Label" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="564.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="177.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t2g" alignment="CENTER" layoutX="325.0" layoutY="177.0" prefHeight="59.0" prefWidth="73.0" text="Label" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="102.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="inc1" alignment="CENTER" layoutX="22.0" layoutY="573.0" mnemonicParsing="false" onAction="#Inc1" prefHeight="83.0" prefWidth="161.0" text="Increase Team 1 Score" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="144.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="318.0" AnchorPane.topAnchor="573.0" />
+      <Button fx:id="inc2" alignment="CENTER" layoutX="325.0" layoutY="573.0" mnemonicParsing="false" onAction="#Inc2" prefHeight="83.0" prefWidth="153.0" text="Increase Team 2 Score" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="144.0" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="573.0" />
+      <Button fx:id="end" alignment="CENTER" layoutX="192.0" layoutY="573.0" mnemonicParsing="false" onAction="#End" prefHeight="83.0" prefWidth="116.0" text="End match" textAlignment="CENTER" AnchorPane.bottomAnchor="144.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="573.0" />
+      <Button fx:id="start" layoutX="192.0" layoutY="482.0" mnemonicParsing="false" onAction="#Start" prefHeight="83.0" prefWidth="116.0" text="Start Match" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="482.0" />
+      <Button fx:id="delete" layoutX="22.0" layoutY="665.0" mnemonicParsing="false" onAction="#Delete" prefHeight="59.0" prefWidth="455.0" text="Delete" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="665.0" />
    </children>
 </AnchorPane>

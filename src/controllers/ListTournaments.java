@@ -66,7 +66,7 @@ public class ListTournaments implements Initializable {
                 public void handle(ActionEvent actionEvent) {
                     Controller state = Controller.getInstance();
                     state.setTournament_id(index);
-                    gotoListMatches();
+                    gotoListTeams();
 
                 }
             });
@@ -102,6 +102,11 @@ public class ListTournaments implements Initializable {
                 public void handle(ActionEvent actionEvent) {
                     try {
                         delete(getTableName(),index);
+                        String q = "DELETE FROM "+models.teams.getTableName()+" WHERE tournament_id = "+index;
+                        models.teams.executeQuery(q);
+
+                        q = "DELETE FROM "+models.matches.getTableName()+" WHERE tournament_id = "+index;
+                        models.matches.executeQuery(q);
                         getElements().remove(index);
                         listTournament.getItems().remove(vBox);
                     } catch (SQLException throwables) {

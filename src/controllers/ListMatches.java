@@ -80,7 +80,7 @@ public class ListMatches implements Initializable {
     @FXML
     public void back(ActionEvent event){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../screens/main.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../screens/list_tournaments.fxml"));
             Stage Window = (Stage)circle.getScene().getWindow();
             Scene s = new Scene(root, 500, 800);
             s.getStylesheets().add("main/app.css");
@@ -144,13 +144,13 @@ public class ListMatches implements Initializable {
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-
+                state.setMatchDetails(match);
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("../screens/match_details.fxml"));
                     Stage window = (Stage)circle.getScene().getWindow();
                     Scene s = new Scene(root,500,800);
                     s.getStylesheets().add("main/app.css");
-                    state.setMatchDetails(match);
+
                     window.setScene(s);
 
                 } catch (IOException e) {
