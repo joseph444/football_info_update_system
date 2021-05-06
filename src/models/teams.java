@@ -114,8 +114,7 @@ public class teams {
         } catch (SQLException e) {
             System.err.println("Exeception Occured!!");
             System.out.println(e.getMessage());
-            disconnect();
-            System.exit(1);
+
         }
     }
 

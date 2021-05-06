@@ -201,8 +201,6 @@ public class matches {
             e.printStackTrace();
             System.err.println("Exeception Occured!!");
             System.out.println(e.getMessage());
-            disconnect();
-            System.exit(1);
         }
     }
 

@@ -119,7 +119,7 @@ public class CreateTeams implements Initializable {
         }
 
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("../screens/list_matches.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../screens/main.fxml"));
             Stage Window = (Stage)teamInit.getScene().getWindow();
             Scene s = new Scene(root, 500, 800);
             s.getStylesheets().add("main/app.css");
